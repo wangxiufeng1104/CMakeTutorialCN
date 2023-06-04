@@ -25,8 +25,10 @@ int main(int argc, char* argv[])
 
   // which square root function should we use?
 #ifdef USE_MYMATH
+  std::cout << "mysqrt" << std::endl; 
   const double outputValue = mysqrt(inputValue);
 #else
+  std::cout << "sqrt" << std::endl; 
   const double outputValue = sqrt(inputValue);
 #endif
 

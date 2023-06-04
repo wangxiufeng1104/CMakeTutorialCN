@@ -476,7 +476,7 @@ endif()
 ## Step6: 添加自定义命令和生成文件
 假设对于本次教程而言,我们决定我们不再想使用平台的`log`和`exp`函数,并希望生成一些会在`mysqrt`函数里使用到的预计算值表.在本节,我们会建立这个表并作为构建的一步,然后编译到我们的应用中.
 
-首先,我们移除`MathFunctions/CMakeLists.txt`中的对`log`和`exp`的检查.然后移除`mysqrt.cxx`中对`HAVE_LOG`和`HAVR_EXP`的检查.同事,我们也可以移除`#include <cmath>`
+首先,我们移除`MathFunctions/CMakeLists.txt`中的对`log`和`exp`的检查.然后移除`mysqrt.cxx`中对`HAVE_LOG`和`HAVR_EXP`的检查.同时,我们也可以移除`#include <cmath>`
 
 在`MathFunctions`子目录下,有一个新文件`MakeTable.cxx`用于生成表格.
 

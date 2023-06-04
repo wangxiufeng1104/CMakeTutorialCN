@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Clean Build Directory",
+        "type": "shell",
+        "command": "rm",
+        "args": ["-rf", "build"],
+        "group": "build"
+      },
+      {
+        "label": "CMake Configure",
+        "type": "shell",
+        "command": "cmake",
+        "args": ["-S", "tutorial/Step1", "-B", "build"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "dependsOn": ["Clean Build Directory"]
+      },
+      {
+        "label": "CMake Build",
+        "type": "shell",
+        "command": "cmake",
+        "args": ["--build", "build"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "dependsOn": ["CMake Configure"]
+      }
+    ]
+  }
+  
